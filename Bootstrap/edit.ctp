@@ -13,9 +13,19 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                         <li><?php echo $this->Html->link(__('Back'), array('action' => 'index')); ?></li>
-                                                <li class="divider"></li>
-                                <li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Model.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Model.id'))); ?></li>
-                                  </ul>
+                        <li class="divider"></li>
+                        <li><?php echo $this->Form->postLink(
+                            __('Delete'),
+                            array(
+                                'action' => 'delete',
+                                $this->Form->value('Model.id')
+                            ),
+                            array(),
+                            __('Are you sure you want to delete # %s?', $this->Form->value('Model.id')
+                            )
+                        );
+                        ?></li>
+                    </ul>
                 </div><!-- /.navbar-collapse -->
               </div><!-- /.container-fluid -->
             </nav>
@@ -26,7 +36,7 @@
                 'role'          =>  'form',
                 'class'         =>  'form-vertical',
                 'inputDefaults' =>  array(
-                    'format'        =>  array(
+                    'format' =>  array(
                         'before',
                         'label',
                         'between',
@@ -34,12 +44,12 @@
                         'error',
                         'after'
                     ),
-                        'class' => 'form-control',
-                    'div'           =>  array('class' =>  'control-group'),
-                    'label'         =>  array('class' =>  'control-label'),
-                    'error'         =>  array(
+                    'class' =>  'form-control',
+                    'div'   =>  array('class'   =>  'control-group'),
+                    'label' =>  array('class'   =>  'control-label'),
+                    'error' =>  array(
                         'attributes' =>  array(
-                            'wrap' => 'span',
+                            'wrap'  =>  'span',
                             'class' =>  'alert alert-danger help-inline'
                         )
                     ),
@@ -53,10 +63,10 @@
                 echo $this->Form->input('example', array('between' => '<div class="controls">', 'after' => '</div>'));
 
                 $options = array(
-                    'type' => 'submit',
-                    'id' => 'btn-submit',
-                    'class' => 'btn btn-success btn-block btn-lg',
-                    'style' => 'margin-top: 10px'
+                    'type'  =>  'submit',
+                    'id'    =>  'btn-submit',
+                    'class' =>  'btn btn-default',
+                    'style' =>  'margin-top: 10px'
                 );
             ?>
     <?php echo $this->Form->button('Save', $options ); ?>
