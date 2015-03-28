@@ -7,7 +7,7 @@
     <div class="col-lg-7">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <nav class="navr nav-pills">
+            <nav class="nav nav-pills">
               <div class="container-fluid">
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
